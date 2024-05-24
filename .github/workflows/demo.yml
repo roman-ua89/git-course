@@ -10,4 +10,4 @@ jobs:
       - name: Print context
         run: |
           echo "Candidate Dashboard | merged into master:"
-          echo "Ticket: ${{ github.head_commit.message }}"
+          echo "Ticket: ${{ github.event.head_commit.message }}"
