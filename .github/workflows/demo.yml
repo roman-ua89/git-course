@@ -7,5 +7,5 @@ jobs:
   print:
     runs-on: ubuntu-latest
     steps:
-      - name: Print to console
-        run: echo something pushed to master!
+      - name: Print context
+        run: echo "${{ toJSON(github) }}"
