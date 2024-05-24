@@ -1,8 +1,11 @@
 name: Demo Workflow
-on: workflow_dispatch
+on:
+  push:
+    branches:
+      - master
 jobs:
   print:
     runs-on: ubuntu-latest
     steps:
       - name: Print to console
-        run: echo My first script!
+        run: echo something pushed to master!
