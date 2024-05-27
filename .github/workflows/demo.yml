@@ -7,7 +7,8 @@ jobs:
   print:
     runs-on: ubuntu-latest
     steps:
-      - name: Print context
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
         run: |
-          echo "Candidate Dashboard | merged into master:"
-          echo "Ticket: ${{ github.event.head_commit.message }}"
+          echo "$GITHUB_CONTEXT"
